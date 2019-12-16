@@ -15,33 +15,14 @@
 Интенсив по нейронным сетям и глубокому обучению от Дмитрия Сошникова
 https://github.com/shwars/NeuroWorkshop
 
-Данный интенсив предназначен как первоначальное введение в тематику нейронных сетей для разработчиков, желающих применять соответствующие технлологии в своих проектах. Интенсив проводился в рамках [большой июньской школы DevCon 2017](http://events.techdays.ru/Future-Technologies/2017-06/).
-Видеозапись интенсива доступна [на нашем канале YouTube](https://www.youtube.com/watch?v=9haeWybwCNk&list=PLVDsxiCH_PqRIZ84g-1X57Tr6VHBVVevP), а
-презентации - [здесь](https://github.com/evangelism/DevCon-School/tree/master/Big%20June%20School/Intensives/NeuroWorkshop). 
-
-Для общения - присоединяйтесь к чату [@neuroworkshop](http://telegram.me/neuroworkshop)
-
-Первым делом - [зайдите сюда](https://notebooks.azure.com/sosh/libraries/neuroworkshop)
-https://notebooks.azure.com/sosh/projects/neuroworkshop
-
-### О чем будет рассказано на интенсиве
-
-  * Microsoft и искусственный интеллект - стратегия
-  * [Введение в нейросети - персептроны](Notebooks/Perceptrons.ipynb)
-  * [Многослойные сети прямого распространения на CNTK](Notebooks/IntroCNTK.ipynb)
-      - [Лабораторная работа: Iris Dataset](Notebooks/Lab_Iris.ipynb)
-      - [Лабораторная работа: MNIST Dataset](Notebooks/Lab_MNIST.ipynb)
-  * [Свёрточные сети для анализа изображений](Notebooks/ConvolutionalNets.ipynb)
-      - [Лабораторная работа: MNIST Convolution](Notebooks/Lab_MNIST.ipynb)
-  * Различные приёмы обучения нейросетей
-  * Рекуррентные нейронные сети для анализа последовательностей
-      - [Лабораторная работа: LSTM и TensorFlow](Notebooks/LSTM.ipynb)
-  * Финальные соревнования: [кошки против собак](Notebooks/Cats_Dogs.ipynb)
-  * Обучение нейросетей в промышленном масштабе
-
 ## Анализ данных на Python в примерах и задачах. Ч2
 
 https://www.youtube.com/playlist?list=PLlb7e2G7aSpT1ntsozWmWJ4kGUsUs141Y
+
+## Программирование нейросетей на Python |  Colab
+
+https://www.asozykin.ru/courses/nnpython
+Курс посвящен именно практическому применению нейронных сетей с использованием готовых библиотек Keras и TensorFlow. Вы научитесь применять эти библиотеки для решения задач анализа изображений и текстов.
 
 
 
@@ -53,7 +34,7 @@ https://www.lektorium.tv/course/22847
 
 https://www.lektorium.tv/course/22874
 
-## Введение в компьютерное зрение и глубокое обучение
+## Введение в компьютерное зрение и глубокое обучение | 2017
 
 https://www.youtube.com/watch?v=p5SjqD7Ut4Y&list=PLbwKcm5vdiSYL_yEwQ6JIICBA4dMtHNxo
 спецкурс "Введение в компьютерное зрение и глубокое обучение", читаемого на факультете ВМК МГУ в весеннем семестре 2017 года
@@ -76,5 +57,4 @@ https://www.youtube.com/watch?v=3oMHsofc0HA&list=PL-_cKNuVAYAWoefY7zsL6c46KWux6v
 https://www.youtube.com/playlist?list=PLlb7e2G7aSpQc4CW-9BI9L_jZVyUbbSWX
 
 ## Анализ изображений и видео, часть 2 (весна 2018)
-
 
