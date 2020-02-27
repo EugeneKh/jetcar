@@ -2,5 +2,9 @@
 /recognition/__pycache__
 /recognition/.ipynb_checkpoints
 /recognition/.vscode
-/recognition/gtsrb-german-traffic-sign
 /recognition/pyimagesearch
+/recognition/gtsrb-german-traffic-sign/*.zip
+/recognition/gtsrb-german-traffic-sign/*.csv
+/recognition/gtsrb-german-traffic-sign/Meta
+/recognition/gtsrb-german-traffic-sign/Test
+/recognition/gtsrb-german-traffic-sign/Train

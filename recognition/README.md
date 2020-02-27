@@ -1,9 +1,34 @@
+## Где лежат большие файлы
+### [датасет](https://yadi.sk/d/_vErSJxl6654bg) :
+содержимое zip архивов:
+- `image.zip` - фото из оригинального датасета
+- `csv.zip` - файлы описаний оттуда же
+- `npy.zip` - обработанные фото для тренировки модели
+
+распаковать в папку проекта `gtsrb-german-traffic-sign` (jet.dataset)
+
+## Файлы:
+---
+## 1_preprocess.py
+Подготовка датасета:
+- Считываем фото с диска
+- Обрабатываем
+
+Файл настроен для демонстрации. *Перед работой* снять комментарии с 23-24 строки (`np.save(f"_{destination}X", np.array(data))` и следующей)
+
+## 2_train.py
+
+## preprocess.pу
+
+## config.pу
+
+---
 ## TODO:
 ### Загрузить одну фотку с помощью cv & skimage
 - отличаются ли они?
 - есть проблемы с RGB & BGR?
-- может ли захватывать с камеры skimage?
-- импортирвать с диска cv?
+    - может ли захватывать с камеры бибиотекой skimage?
+    - импортирвать с диска  с помощью cv?
 ## Заметки:
 ### Интерактивная консоль дополняет путь директорией, из которой jupyter notebook запущен
 - Запускаем JPnotebook из recognition папки проекта
@@ -20,7 +45,7 @@
 
 что за странный диапазон она отдает?
 
-## Drpricated
+## Depricated
 - `H = model.fit_generator(`
 
 WARNING:tensorflow:From <ipython-input-140-b12f63d35c7b>:7: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
@@ -37,18 +62,4 @@ If using Keras pass *_constraint arguments to layers.
 INFO:tensorflow:Assets written to: trafficsignet.model1\assets
 
 
-
----
-## 1_preprocess.py
-Подготовка датасета:
-- Считываем фото с диска
-- Обрабатываем
-
-Файл настроен для демонстрации
-
-Перед работой 
-- снять комментарии с 23-24 стр `np.save(f"_{destination}X", np.array(data))` и следующей
-
----
-## 2_train.py
 
