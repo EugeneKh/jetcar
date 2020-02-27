@@ -8,7 +8,7 @@
 /recognition/gtsrb-german-traffic-sign/Meta
 /recognition/gtsrb-german-traffic-sign/Test
 /recognition/gtsrb-german-traffic-sign/Train
-//recognition/gtsrb-german-traffic-sign
+/recognition/gtsrb-german-traffic-sign
 /image_dataset_gui/test_crop
 /image_dataset_gui/main.py
 /image_dataset_gui
