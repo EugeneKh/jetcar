@@ -1,0 +1,6 @@
+/recognition/old
+/recognition/__pycache__
+/recognition/.ipynb_checkpoints
+/recognition/.vscode
+/recognition/gtsrb-german-traffic-sign
+/recognition/pyimagesearch
