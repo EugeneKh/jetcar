@@ -7,6 +7,21 @@
 
 распаковать в папку проекта `gtsrb-german-traffic-sign` (jet.dataset)
 
+для запуска 2_train.py, достаточно `npy.zip`
+
+## Дополнительные программы:
+### Стобоскоп 
+файл `3_testcam.py` за основу + 
+- сохранение:
+    ```python
+    p = os.path.sep.join([os.getcwd(), "images", "{}.png".format(i)])
+    cv2.imwrite(p, image)
+    ```
+ - задержка:
+ ```python
+ import time
+ time.sleep(секунды)
+ ```
 ## Файлы:
 ---
 ## 1_preprocess.py
