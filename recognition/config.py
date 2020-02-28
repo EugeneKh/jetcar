@@ -3,11 +3,11 @@ from dataclasses import dataclass
 @dataclass
 class jet:
     dataset: str = "gtsrb-german-traffic-sign"
-    model: str = "trafficsignet.model"
+    model: str = "trafficsignnet.model"
     # Гиперпараметры
     batch_size: int = 64
-    learning_rate: float = 0.001 # Скорость обучения η
-    epoch_nums: int = 10
+    learning_rate: float = 0.005 # Скорость обучения η
+    epoch_nums: int = 30
 
     @staticmethod # для интерактивной консоли
     def reload():

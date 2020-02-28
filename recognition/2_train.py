@@ -3,8 +3,7 @@ import numpy as np
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.optimizers import Adam
-# TODO: Класс с моделью переименовать
-from pyimagesearch.trafficsignnet import TrafficSignNet
+from jetcnn_v1.trafficsignnet import TrafficSignNet
 import matplotlib
 matplotlib.use("Agg")
 from sklearn.metrics import classification_report
@@ -68,6 +67,7 @@ print(classification_report(testY.argmax(axis=1),
 # сохраняем обученную сеть на диск
 model.save(jet.model)
 
+# TODO: Сохранить историю H
 # Рисуем график с отчётом
 N = np.arange(0, jet.epoch_nums)
 plt.style.use("ggplot")
