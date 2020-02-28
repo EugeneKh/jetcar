@@ -5,7 +5,7 @@
 - `csv.zip` - файлы описаний оттуда же
 - `npy.zip` - обработанные фото для тренировки модели
 
-распаковать в папку проекта `gtsrb-german-traffic-sign` (jet.dataset)
+распаковать в папку проекта `gtsrb-german-traffic-sign` (или что установлено в переменной jet.dataset)
 
 для запуска 2_train.py, достаточно `npy.zip`
 
@@ -17,11 +17,16 @@
 p = os.path.sep.join([os.getcwd(), "images", "{}.png".format(i)])
 cv2.imwrite(p, image)
 ```
- - задержка:
- ```python
- import time
- time.sleep(секунды)
- ```
+- задержка:
+```python
+import time
+time.sleep(секунды)
+```
+### Резалка фоток
+- разделить на части (классы, функции)
+- изменить формат вывода (структуру выходного датасета)
+- прокомментировать
+
 ## Файлы:
 ---
 ## 1_preprocess.py
