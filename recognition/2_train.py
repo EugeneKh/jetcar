@@ -33,6 +33,7 @@ testY = to_categorical(testY, numLabels)
 classTotals = trainY.sum(axis=0)
 # массив кооф ...
 classWeight = classTotals.max() / classTotals
+classWeight = dict(enumerate(classWeight))
 
 # настраиваем генератор для аугментации
 aug = ImageDataGenerator(
