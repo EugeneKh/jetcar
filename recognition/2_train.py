@@ -1,15 +1,28 @@
 import os
 import numpy as np
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.optimizers import Adam
-from jetcnn_v1.trafficsignnet import TrafficSignNet
+import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
-from sklearn.metrics import classification_report
 import matplotlib.pyplot as plt
+
+import tensorflow as tf
+print(f"TF ver. = {tf.version.VERSION}")
+device_name = tf.test.gpu_device_name()
+if device_name != '/device:GPU:0':
+#   raise SystemError("GPU device not found")
+    print("GPU device not found")
+print(f"Found GPU at: {device_name}")
+
+#from tensorflow.keras.utils import to_categorical
+#from tensorflow.keras.preprocessing.image import ImageDataGenerator
+#from tensorflow.keras.optimizers import Adam
+from tensorflow import keras
+from sklearn.metrics import classification_report
+#os.chdir("c:\\Users\\eugen\\Documents\\GitHub\\jetcar\\recognition")
+from jetcnn_v1.trafficsignnet import TrafficSignNet
 from config import jet
-import pandas as pd
+
+
 
 # Загружаем датасет
 start_cwd = os.getcwd()
@@ -24,18 +37,20 @@ os.getcwd()
 
 # one-hot encode
 # приведение к виду [0, 0, 1, 0, 0] для 2-й из 5 категорий
+# numLabels - лишний. keras сам считает. но это не точно )
 numLabels = len(np.unique(trainY))
-trainY = to_categorical(trainY, numLabels)
-testY = to_categorical(testY, numLabels)
+trainY = keras.utils.to_categorical(trainY, numLabels)
+testY = keras.utils.to_categorical(testY, numLabels)
 
-# получаем множители для каждого класса, чтобы выровнять dataset
+# получаем множители для каждого класса, чтобы выровнять dataset 
 # массив с кол-вом картинок в каждом классе
 classTotals = trainY.sum(axis=0)
 # массив кооф ...
 classWeight = classTotals.max() / classTotals
+classWeight = dict(enumerate(classWeight))
 
 # настраиваем генератор для аугментации
-aug = ImageDataGenerator(
+aug = keras.preprocessing.image.ImageDataGenerator(
     rotation_range=10,
     zoom_range=0.15,
     width_shift_range=0.1,
@@ -45,17 +60,20 @@ aug = ImageDataGenerator(
     vertical_flip=False,
     fill_mode="nearest")
 
-# настраиванм оптимизатор, строим и компилим модель
-opt = Adam(lr=jet.learning_rate, decay=jet.learning_rate / (jet.epoch_nums * 0.5))
+# настраиванм оптимизатор
+opt = keras.optimizers.Adam(lr=jet.learning_rate, decay=jet.learning_rate / (jet.epoch_nums * 0.5))
+# строим и компилим модель
 model = TrafficSignNet.build(width=32, height=32, depth=3, classes=numLabels)
+#model.get_config()
+#model.summary()
 model.compile(loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy"])
 
 # Обучение
-H = model.fit_generator(
+H = model.fit(
     aug.flow(trainX, trainY, batch_size=jet.batch_size),
     validation_data=(testX, testY),
     steps_per_epoch=trainX.shape[0] // jet.batch_size,
-    epochs=jet.epoch_nums,
+    epochs=20,
     class_weight=classWeight)
 
 # Оценка и вывод результатов

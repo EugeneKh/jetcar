@@ -9,6 +9,15 @@
 /recognition/gtsrb-german-traffic-sign/Test
 /recognition/gtsrb-german-traffic-sign/Train
 /recognition/gtsrb-german-traffic-sign
+/recognition/dataset
 /image_dataset_gui/test_crop
 /image_dataset_gui/main.py
 /image_dataset_gui
+/tf
+/.vscode
+.vscode/launch.json
+.vscode/settings.json
+recognition/test_image
+recognition/model
+recognition/output.avi
+recognition/strobo_size.py

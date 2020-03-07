@@ -1,12 +1,20 @@
 {
-    "files.exclude": {
+    // "files.exclude": {
         //"**/.git": true, // this is a default value
         //"**/.DS_Store": true, // this is a default value
         //"**/node_modules": true, // this excludes all folders named "node_modules" from the explore tree
         //"recognition/gtsrb-german-traffic-sign": true, // this excludes the folder only from the root ofyour workspace 
         //"3dprint": true
-    },
+    // },
+    //Enabling source map support in the Python Extension will adversely impact performance of the extension.
+    // "python.linting.pylintArgs": [
+        //    "--extension-pkg-whitelist = tensorflow-gpu"
+        // ],
+        // "python.autoComplete.extraPaths": [
+            //     "C:\\Users\\eugen\\Documents\\GitHub\\jetcar\\recognition"
+            // ],
     "python.pythonPath": "C:\\Users\\eugen\\Anaconda3\\envs\\tfgpu\\python.exe",
-    "files.autoSave": "afterDelay",
-    "commentTranslate.targetLanguage": "ru"
+    "python.dataScience.jupyterServerURI": "local",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
